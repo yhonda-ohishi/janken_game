@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけんバトル - Step 08: UI改善</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>じゃんけんバトル</h1>
+
+        <!-- 敵の進行状況 -->
+        <div class="enemy-progress">
+            <p>敵: <span id="enemy-progress-text">1 / 3</span></p>
+        </div>
+
+        <!-- ラウンド数表示 -->
+        <div class="round-info">
+            <p>Round: <span id="round-count">0</span></p>
+        </div>
+
+        <!-- ダメージ説明 -->
+        <div class="damage-info">
+            <p>グー: 10ダメージ | チョキ: 20ダメージ | パー: 30ダメージ</p>
+        </div>
+
+        <!-- プレイヤーのHP表示 -->
+        <div class="hp-container player-hp">
+            <h2>あなた</h2>
+            <div class="hp-info">
+                <span>HP: <span id="player-hp-text">100</span> / 100</span>
+            </div>
+            <div class="hp-bar-outer">
+                <div class="hp-bar-inner" id="player-hp-bar"></div>
+            </div>
+        </div>
+
+        <!-- 敵のHP表示 -->
+        <div class="hp-container enemy-container">
+            <div class="enemy-header">
+                <div>
+                    <h2 id="enemy-name">スライム</h2>
+                    <p id="enemy-description" class="enemy-description">グーを出しやすい</p>
+                </div>
+                <div class="enemy-image" id="enemy-image">🟢</div>
+            </div>
+            <div class="hp-info">
+                <span>HP: <span id="enemy-hp-text">100</span> / <span id="enemy-max-hp">100</span></span>
+            </div>
+            <div class="hp-bar-outer">
+                <div class="hp-bar-inner enemy-hp-bar" id="enemy-hp-bar"></div>
+            </div>
+            <!-- 敵の傾向表示 -->
+            <div class="tendency-info">
+                <p id="tendency-text">グー: 50% | チョキ: 30% | パー: 20%</p>
+            </div>
+        </div>
+
+        <!-- 対戦表示エリア -->
+        <div class="battle-area" id="battle-area">
+            <div class="battle-choice">
+                <p>あなた</p>
+                <div class="battle-hand" id="battle-player-hand">❔</div>
+            </div>
+            <div class="battle-vs">VS</div>
+            <div class="battle-choice">
+                <p>敵</p>
+                <div class="battle-hand" id="battle-enemy-hand">❔</div>
+            </div>
+        </div>
+
+        <!-- 結果表示エリア -->
+        <div id="result" class="result"></div>
+
+        <!-- 手の選択ボタン -->
+        <div class="buttons">
+            <button id="rock" class="choice-btn">
+                グー
+                <span class="damage-label">(10)</span>
+            </button>
+            <button id="scissors" class="choice-btn">
+                チョキ
+                <span class="damage-label">(20)</span>
+            </button>
+            <button id="paper" class="choice-btn">
+                パー
+                <span class="damage-label">(30)</span>
+            </button>
+        </div>
+
+        <!-- リスタートボタン -->
+        <div class="restart-container">
+            <button id="restart-btn" class="restart-btn">リスタート</button>
+        </div>
+
+        <!-- バトルログ -->
+        <div class="log-container">
+            <h3>バトルログ</h3>
+            <div id="battle-log" class="battle-log"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

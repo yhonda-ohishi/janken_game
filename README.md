@@ -2,7 +2,35 @@
 
 HTML/CSS/JavaScriptで作成したブラウザベースのじゃんけんバトルゲームです。
 
-## 🎮 ゲームの特徴
+## 🎮 デモ
+
+**完成版を今すぐプレイ:** [https://yhonda-ohishi.github.io/janken_game/step10_final/answer/index.html](https://yhonda-ohishi.github.io/janken_game/step10_final/answer/index.html)
+
+## 📚 学習パス
+
+このリポジトリには、初心者向けの**10ステップの段階的な学習教材**が含まれています。
+
+### 🎯 学習を始める
+
+1. [📖 学習パスの全体像を見る](LEARNING_PATH.md)
+2. [🚀 Step 01から始める](step01_basic_janken/README.md)
+
+### ステップ一覧
+
+| ステップ | タイトル | 学習内容 | デモ |
+|---------|---------|---------|------|
+| Step 01 | [基本のじゃんけん](step01_basic_janken/README.md) | HTMLボタン、イベント処理、ランダム選択 | [▶️](https://yhonda-ohishi.github.io/janken_game/step01_basic_janken/answer/index.html) |
+| Step 02 | [勝敗判定](step02_win_lose/README.md) | if文、勝敗ロジック、CSS変更 | [▶️](https://yhonda-ohishi.github.io/janken_game/step02_win_lose/answer/index.html) |
+| Step 03 | [HPシステム](step03_hp_system/README.md) | 変数管理、HPバー、ゲーム終了判定 | [▶️](https://yhonda-ohishi.github.io/janken_game/step03_hp_system/answer/index.html) |
+| Step 04 | [ダメージ計算](step04_damage_calculation/README.md) | オブジェクト、異なるダメージ値 | [▶️](https://yhonda-ohishi.github.io/janken_game/step04_damage_calculation/answer/index.html) |
+| Step 05 | [複数ラウンド](step05_multiple_rounds/README.md) | 配列、ログ表示、リスタート機能 | [▶️](https://yhonda-ohishi.github.io/janken_game/step05_multiple_rounds/answer/index.html) |
+| Step 06 | [敵キャラクター](step06_enemy_characters/README.md) | 複数の敵、データ構造、順番に戦闘 | [▶️](https://yhonda-ohishi.github.io/janken_game/step06_enemy_characters/answer/index.html) |
+| Step 07 | [敵の傾向](step07_enemy_tendencies/README.md) | 確率、重み付けランダム | [▶️](https://yhonda-ohishi.github.io/janken_game/step07_enemy_tendencies/answer/index.html) |
+| Step 08 | [UI改善](step08_ui_improvements/README.md) | CSSアニメーション、視覚的フィードバック | [▶️](https://yhonda-ohishi.github.io/janken_game/step08_ui_improvements/answer/index.html) |
+| Step 09 | [アイテムシステム](step09_item_system/README.md) | 回復アイテム、リソース管理 | [▶️](https://yhonda-ohishi.github.io/janken_game/step09_item_system/answer/index.html) |
+| Step 10 | [最終版](step10_final/README.md) | オプション機能、完成形 | [▶️](https://yhonda-ohishi.github.io/janken_game/step10_final/answer/index.html) |
+
+## ✨ ゲームの特徴
 
 - **3体の敵と順番に戦闘**: スライム → ゴブリン → ドラゴン
 - **HP制バトル**: プレイヤー100 HP、敵は段階的に増加（100/150/200）
@@ -12,25 +40,7 @@ HTML/CSS/JavaScriptで作成したブラウザベースのじゃんけんバト�
 - **回復アイテム**: 3回使用可能（+50 HP）、使用すると必ず敵の攻撃を受ける
 - **前回と同じ手を禁止モード**: オプションで戦略性を向上
 
-## 📁 ファイル構成
-
-```
-janken/
-├── index.html    # ゲームのHTML構造
-├── style.css     # スタイルシート
-├── script.js     # ゲームロジック
-└── README.md     # このファイル
-```
-
-## 🎯 ゲームの遊び方
-
-1. `index.html` をブラウザで開く
-2. 必要に応じて「前回と同じ手を禁止」オプションをON
-3. グー・チョキ・パーのいずれかを選択
-4. 敵を全て倒すと勝利、自分のHPが0になると敗北
-5. 回復アイテムは使用すると必ず敵の攻撃を受けるので注意
-
-## 🎲 ダメージ計算
+## 🎲 ゲームルール
 
 ### 基本ダメージ
 - **グー**: 10ダメージ
@@ -38,312 +48,154 @@ janken/
 - **パー**: 30ダメージ
 
 ### クリティカルヒット
-- 発動確率: 15% (`CRITICAL_CHANCE = 0.15`)
-- クリティカル時のダメージ: 基本ダメージ × 1.5（小数点以下切り捨て）
-- 例: グーでクリティカル → 10 × 1.5 = 15ダメージ
+- 発動確率: 15%
+- クリティカル時: 基本ダメージ × 1.5
 
-## 👾 敵キャラクター
+### 敵キャラクター
 
-### 1. スライム（HP: 100）
-- **画像**: 🟢
-- **傾向**: バランス型
-- **確率**: グー 33% / チョキ 33% / パー 34%
+#### 1. スライム（HP: 100）
+- 🟢 バランス型
+- グー 33% / チョキ 33% / パー 34%
 
-### 2. ゴブリン（HP: 150）
-- **画像**: 👹
-- **傾向**: グー好き
-- **確率**: グー 50% / チョキ 25% / パー 25%
+#### 2. ゴブリン（HP: 150）
+- 👹 グー好き
+- グー 50% / チョキ 25% / パー 25%
 
-### 3. ドラゴン（HP: 200）
-- **画像**: 🐉
-- **傾向**: パー好き
-- **確率**: グー 20% / チョキ 20% / パー 60%
+#### 3. ドラゴン（HP: 200）
+- 🐉 パー好き
+- グー 20% / チョキ 20% / パー 60%
 
-## 💊 回復システム
+### 回復システム
+- **回復アイテム**: 3回使用可能、+50 HP
+- **ペナルティ**: 使用すると必ず敵の攻撃を受ける
+- **敵撃破ボーナス**: 敵を倒すと+30 HP回復
 
-### 回復アイテム
-- **使用回数**: 3回
-- **回復量**: +50 HP（最大HPは100）
-- **ペナルティ**: 使用ターンは敵が必ず攻撃し、プレイヤーは防御不可
+## 📁 ファイル構成
 
-### 敵撃破時の回復
-- 敵を倒すと自動的に+30 HP回復
-- 最大HPを超えては回復しない
-
-## 🎮 主要な関数の詳細
-
-### 1. `startNextBattle()`
-**役割**: 次の敵とのバトルを開始
-
-**ロジック**:
-1. `currentEnemyIndex`が敵配列の長さ以上なら`gameWin()`を呼び出し
-2. 現在のインデックスから敵データを取得
-3. 敵のHPを`maxHp`で初期化
-4. `isBattling`フラグをtrueに設定
-5. UI更新（敵名、説明、画像、選択表示をリセット）
-6. 前回の手をリセット（`lastPlayerChoice`, `lastEnemyChoice`を`null`）
-7. HPバーを更新
-8. ログに「〇〇が現れた！」と表示
-
-### 2. `playRound(playerChoice)`
-**役割**: じゃんけんの1ラウンドを実行
-
-**パラメータ**:
-- `playerChoice`: プレイヤーの選択（'rock', 'scissors', 'paper'）
-
-**ロジック**:
-1. 現在の敵データを取得
-2. `getEnemyChoice()`で敵の手を決定
-3. `determineWinner()`で勝敗判定
-4. 選択した手のアイコンを画面に表示
-5. アニメーション適用（`choice-animate`クラス、0.5秒後に削除）
-6. 背景色を結果に応じて変更（`win`/`lose`/`draw`クラス）
-7. ログに対戦内容を表示
-8. 前回の手を記録
-9. **勝った場合**:
-   - 15%の確率でクリティカル判定
-   - ダメージ計算: `baseDamage`または`baseDamage * 1.5`（小数点以下切り捨て）
-   - 敵のHPからダメージを減算（0未満にはならない）
-   - ログにダメージ内容を表示
-10. **負けた場合**:
-    - プレイヤーが同様にダメージを受ける
-11. **引き分けの場合**:
-    - ログに「引き分け！」と表示
-12. HP表示を更新
-13. ボタンの状態を更新
-14. `checkGameOver()`でゲーム終了判定
-
-### 3. `getEnemyChoice()`
-**役割**: 敵の手を傾向に基づいて確率的に決定
-
-**ロジック**:
-1. 現在の敵の傾向（`tendency`）を取得
-2. 選択肢配列: `['rock', 'scissors', 'paper']`
-3. 重み配列: `[tendency.rock, tendency.scissors, tendency.paper]`
-4. **前回と同じ手を禁止モードの場合**:
-   - 前回の敵の手（`lastEnemyChoice`）のインデックスを検索
-   - 選択肢配列と重み配列からその要素を削除
-   - 残りの重みの合計を計算
-   - 各重みを合計で割って正規化（合計が1.0になるように調整）
-   - コンソールにデバッグ情報を出力
-5. 0～1の乱数を生成
-6. 累積確率方式で選択:
-   - 各選択肢について累積確率を計算
-   - 乱数が累積確率未満になった時点でその手を返す
-7. ループを抜けた場合は最後の選択肢を返す
-
-**例**（ゴブリンがグーを前回出した場合）:
-- 禁止前: rock(50%), scissors(25%), paper(25%)
-- rock除外後: scissors, paper
-- 正規化: scissors(50%), paper(50%)
-
-### 4. `determineWinner(player, enemy)`
-**役割**: じゃんけんの勝敗を判定
-
-**パラメータ**:
-- `player`: プレイヤーの手
-- `enemy`: 敵の手
-
-**ロジック**:
-1. 両者の手が同じなら`'draw'`を返す
-2. 勝利条件マップを定義:
-   ```javascript
-   {
-     rock: 'scissors',    // グーはチョキに勝つ
-     scissors: 'paper',   // チョキはパーに勝つ
-     paper: 'rock'        // パーはグーに勝つ
-   }
-   ```
-3. `winConditions[player] === enemy`なら`'win'`、そうでなければ`'lose'`
-
-### 5. `updateHpDisplay()`
-**役割**: HPバーと数値表示を更新
-
-**ロジック**:
-1. 現在の敵データを取得
-2. プレイヤーHP数値を更新（`playerHpElement.textContent`）
-3. 敵HP数値を更新（`enemyHpElement.textContent`）
-4. プレイヤーHPバーの幅を計算:
-   - 幅 = (現在のHP / 最大HP) × 100%
-5. 敵HPバーの幅を計算:
-   - 幅 = (現在の敵HP / 敵の最大HP) × 100%
-6. CSSトランジションで滑らかに変化（0.5秒）
-
-### 6. `checkGameOver()`
-**役割**: 戦闘終了条件をチェック
-
-**ロジック**:
-1. **敵のHPが0以下の場合**:
-   - `isBattling`をfalseに設定
-   - ログに「〇〇を倒した！」と表示
-   - 回復処理:
-     - 回復量30を加算（最大HP100を超えない）
-     - 実際に回復した量を計算
-     - 回復があればログに表示
-     - HP表示を更新
-   - `currentEnemyIndex`をインクリメント
-   - 1.5秒後に次の処理:
-     - 敵がまだいれば`startNextBattle()`
-     - 全て倒していれば`gameWin()`
-
-2. **プレイヤーのHPが0以下の場合**:
-   - `isGameOver`と`isBattling`をtrueに設定
-   - ゲームオーバーテキストを「💀 敗北... 💀」に設定（赤色）
-   - 全てのボタンを無効化
-   - 1秒後にゲームオーバー画面を表示
-
-### 7. `updateButtonStates()`
-**役割**: 前回と同じ手を禁止モード時のボタン表示を更新
-
-**ロジック**:
-1. 禁止モードがOFFまたは前回の手がない場合:
-   - 全てのボタンの透明度を1.0（不透明）に設定
-2. 禁止モードがONの場合:
-   - 各ボタンについて:
-     - 前回の手と同じなら透明度0.3（薄く表示）
-     - 異なる手なら透明度1.0（通常表示）
-
-### 8. `useHealItem()`
-**役割**: 回復アイテムを使用
-
-**ロジック**:
-1. 所持数が0以下なら終了
-2. 所持数を1減らす
-3. UI上のアイテム数を更新（`×2`など）
-4. 回復処理:
-   - 回復量50を加算（最大HP100を超えない）
-   - 実際の回復量を計算
-   - ログに回復内容を表示
-   - HP表示を更新
-5. 所持数が0になったらボタンを無効化
-6. **1秒後に敵のターン**:
-   - 敵の手を`getEnemyChoice()`で決定
-   - プレイヤー側の表示を💊アイコンに
-   - 敵側の表示を選択した手のアイコンに
-   - アニメーション適用
-   - 背景を赤色（負け）に変更
-   - ログに敵の手を表示
-   - ダメージ計算（クリティカル判定あり）
-   - プレイヤーHPからダメージを減算
-   - ログにダメージ内容を表示
-   - `lastEnemyChoice`を記録（前回の手として）
-   - HP表示とボタン状態を更新
-   - `checkGameOver()`で終了判定
-
-### 9. `gameWin()`
-**役割**: 全ての敵を倒した時の勝利処理
-
-**ロジック**:
-1. `isGameOver`と`isBattling`をtrueに設定
-2. ゲームオーバーテキストを「🎉 全ての敵を倒した！ 🎉」に設定（緑色）
-3. 全てのボタンを無効化
-4. 1秒後にゲームオーバー画面を表示
-
-### 10. `resetGame()`
-**役割**: ゲームを最初から開始
-
-**ロジック**:
-1. ゲーム状態を初期化:
-   - プレイヤーHP: 100
-   - 敵インデックス: 0
-   - フラグをリセット
-   - 前回の手をクリア
-   - 禁止モードはチェックボックスの状態を維持
-   - 回復アイテム: 3個
-2. UI要素をリセット:
-   - ゲームオーバー画面を非表示
-   - ログをクリア
-   - 敵画像と選択表示を「?」に
-   - 背景色をデフォルトに
-3. 回復アイテムをリセット:
-   - ボタンを有効化
-   - 所持数表示を「×3」に
-4. 全ての選択ボタンを有効化
-5. HP表示を更新
-6. `startNextBattle()`で最初の敵との戦闘開始
-
-### 11. `addLog(message, className)`
-**役割**: バトルログに新しいメッセージを追加
-
-**パラメータ**:
-- `message`: 表示するメッセージ
-- `className`: CSSクラス名（`'log-win'`, `'log-lose'`, `'log-draw'`, `'log-critical'`）
-
-**ロジック**:
-1. 新しい`<div>`要素を作成
-2. クラス名を`log-entry`とパラメータで指定されたクラスに設定
-3. テキストコンテンツを設定
-4. ログコンテナに追加
-5. スクロールを最下部に移動（`scrollTop = scrollHeight`）
-
-## 🎨 スタイリング
-
-### 主要なCSSクラス
-
-- **`.battle-choices.win`**: 勝利時の緑色グラデーション背景
-- **`.battle-choices.lose`**: 敗北時の赤色グラデーション背景
-- **`.battle-choices.draw`**: 引き分け時の黄色グラデーション背景
-- **`.choice-animate`**: じゃんけんの手を揺らすアニメーション
-- **`.log-win`**: 勝利ログ（緑背景）
-- **`.log-lose`**: 敗北ログ（赤背景）
-- **`.log-draw`**: 引き分けログ（黄色背景）
-- **`.log-critical`**: クリティカルログ（オレンジ背景）
-
-### アニメーション
-
-1. **`enemyAppear`**: 敵出現時のアニメーション（0.5秒）
-   - 透明度: 0 → 1
-   - スケール: 0.5 → 1.0
-
-2. **`choiceShake`**: 手を出す時のアニメーション（0.5秒）
-   - 左右に揺れる（-10度 → 0度 → 10度 → 0度）
-
-## 🔧 技術仕様
-
-### グローバル定数
-```javascript
-CRITICAL_CHANCE = 0.15  // クリティカル率
-DAMAGE = {
-  rock: 10,
-  scissors: 20,
-  paper: 30
-}
-ENEMIES = [...]  // 敵データ配列
+```
+janken_game/
+├── index.html              # 完成版のHTML
+├── style.css               # 完成版のCSS
+├── script.js               # 完成版のJavaScript
+├── README.md               # このファイル
+├── LEARNING_PATH.md        # 学習パスの詳細
+├── step01_basic_janken/    # Step 01: 基本のじゃんけん
+│   ├── README.md           # 課題説明
+│   └── answer/             # 解答コード
+├── step02_win_lose/        # Step 02: 勝敗判定
+├── step03_hp_system/       # Step 03: HPシステム
+├── step04_damage_calculation/ # Step 04: ダメージ計算
+├── step05_multiple_rounds/ # Step 05: 複数ラウンド
+├── step06_enemy_characters/ # Step 06: 敵キャラクター
+├── step07_enemy_tendencies/ # Step 07: 敵の傾向
+├── step08_ui_improvements/ # Step 08: UI改善
+├── step09_item_system/     # Step 09: アイテムシステム
+└── step10_final/           # Step 10: 最終版（完成形）
+    └── answer/             # 完成版コード
 ```
 
-### ゲーム状態オブジェクト
-```javascript
-gameState = {
-  playerHp: 100,           // プレイヤーHP
-  playerMaxHp: 100,        // プレイヤー最大HP
-  enemyHp: 100,            // 敵HP
-  currentEnemyIndex: 0,    // 現在の敵インデックス
-  isGameOver: false,       // ゲーム終了フラグ
-  isBattling: false,       // 戦闘中フラグ
-  lastPlayerChoice: null,  // 前回のプレイヤーの手
-  lastEnemyChoice: null,   // 前回の敵の手
-  noRepeatMode: false,     // 同じ手禁止モード
-  healItems: 3             // 回復アイテム所持数
-}
+## 🎓 学習について
+
+### 対象者
+- プログラミング初心者
+- HTML/CSS/JavaScriptの基礎を学びたい方
+- ゲーム開発に興味がある方
+
+### 学習時間
+- **合計**: 約12〜16時間
+- **1ステップ**: 30分〜2時間
+
+### 前提知識
+- HTMLの基本（タグ、属性）
+- CSSの基本（セレクタ、プロパティ）
+- JavaScriptの基本（変数、関数、if文）
+
+## 🚀 使い方
+
+### 完成版をプレイ
+```bash
+# リポジトリをクローン
+git clone https://github.com/yhonda-ohishi/janken_game.git
+
+# ディレクトリに移動
+cd janken_game
+
+# index.html をブラウザで開く
 ```
+
+または、[GitHub Pages](https://yhonda-ohishi.github.io/janken_game/step10_final/answer/index.html)で直接プレイ
+
+### 学習を始める
+1. [LEARNING_PATH.md](LEARNING_PATH.md) を読む
+2. [step01_basic_janken/README.md](step01_basic_janken/README.md) から順番に進める
+3. 自力で課題に取り組む
+4. 詰まったら `answer/` フォルダの解答を参照
+5. 次のステップに進む
+
+## 🔧 技術スタック
+
+- **HTML5** - マークアップ
+- **CSS3** - スタイリング、アニメーション
+- **JavaScript (ES6+)** - ゲームロジック
+
+### 主な技術要素
+- DOM操作
+- イベント処理
+- 配列・オブジェクト
+- 条件分岐・ループ
+- 確率計算
+- CSSアニメーション
+- レスポンシブデザイン
+
+## 🎨 主要な関数の詳細
+
+各関数の詳細なロジックについては、[関数詳細ドキュメント](FUNCTION_DETAILS.md)を参照してください。
+
+主要な関数：
+- `startNextBattle()` - 次の敵とのバトル開始
+- `playRound()` - じゃんけんの1ラウンド実行
+- `getEnemyChoice()` - 敵の手を確率的に決定
+- `determineWinner()` - 勝敗判定
+- `updateHpDisplay()` - HPバー更新
+- `checkGameOver()` - ゲーム終了判定
+- `useHealItem()` - 回復アイテム使用
 
 ## 🐛 デバッグ機能
 
-開発者コンソール（F12）で以下の情報を確認できます：
-
-- 敵の手の選択確率（前回と同じ手を禁止モード時）
-- 選択肢の除外状態
+開発者コンソール（F12）で以下を確認できます：
+- 敵の手の選択確率
 - 正規化後の確率分布
 - 実際に選択された手と乱数値
 
+## 🤝 コントリビューション
+
+プルリクエストや Issue の報告を歓迎します！
+
+1. このリポジトリをフォーク
+2. フィーチャーブランチを作成 (`git checkout -b feature/amazing-feature`)
+3. 変更をコミット (`git commit -m 'Add amazing feature'`)
+4. ブランチにプッシュ (`git push origin feature/amazing-feature`)
+5. プルリクエストを作成
+
 ## 📝 ライセンス
 
-MIT License
+MIT License - 自由に学習・改変・配布できます
 
 ## 👤 作成者
 
-yhonda-ohishi
+**yhonda-ohishi**
+- Email: honda@ohishiunyusouko.com
+- GitHub: [@yhonda-ohishi](https://github.com/yhonda-ohishi)
 
-## 🔗 リポジトリ
+## 🔗 リンク
 
-https://github.com/yhonda-ohishi/janken_game
+- **リポジトリ**: [https://github.com/yhonda-ohishi/janken_game](https://github.com/yhonda-ohishi/janken_game)
+- **完成版デモ**: [https://yhonda-ohishi.github.io/janken_game/step10_final/answer/index.html](https://yhonda-ohishi.github.io/janken_game/step10_final/answer/index.html)
+- **学習パス**: [LEARNING_PATH.md](LEARNING_PATH.md)
+- **関数詳細**: [FUNCTION_DETAILS.md](FUNCTION_DETAILS.md)
+
+---
+
+**さあ、じゃんけんバトルゲームの開発を始めましょう！ 🚀**
+
+[📖 学習パスを見る](LEARNING_PATH.md) | [🚀 Step 01から始める](step01_basic_janken/README.md)

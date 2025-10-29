@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけんバトル - Step 03: HPシステム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>じゃんけんバトル</h1>
+
+        <!-- プレイヤーのHP表示 -->
+        <div class="hp-container">
+            <h2>あなた</h2>
+            <div class="hp-info">
+                <span>HP: <span id="player-hp-text">100</span> / 100</span>
+            </div>
+            <div class="hp-bar-outer">
+                <div class="hp-bar-inner" id="player-hp-bar"></div>
+            </div>
+        </div>
+
+        <!-- コンピューターのHP表示 -->
+        <div class="hp-container">
+            <h2>コンピューター</h2>
+            <div class="hp-info">
+                <span>HP: <span id="computer-hp-text">100</span> / 100</span>
+            </div>
+            <div class="hp-bar-outer">
+                <div class="hp-bar-inner" id="computer-hp-bar"></div>
+            </div>
+        </div>
+
+        <!-- 結果表示エリア -->
+        <div id="result" class="result"></div>
+
+        <!-- 手の選択ボタン -->
+        <div class="buttons">
+            <button id="rock" class="choice-btn">グー</button>
+            <button id="scissors" class="choice-btn">チョキ</button>
+            <button id="paper" class="choice-btn">パー</button>
+        </div>
+
+        <!-- 選択した手の表示 -->
+        <div class="choices">
+            <div>
+                <p>あなたの手:</p>
+                <p id="player-choice" class="choice-display">-</p>
+            </div>
+            <div>
+                <p>相手の手:</p>
+                <p id="computer-choice" class="choice-display">-</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
