@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけんバトル</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>じゃんけんバトル</h1>
+
+        <div class="game-options">
+            <label class="option-label">
+                <input type="checkbox" id="noRepeatOption">
+                <span>前回と同じ手を禁止</span>
+            </label>
+        </div>
+
+        <div class="game-info">
+            <div class="player-info">
+                <h2>プレイヤー</h2>
+                <div class="hp-bar">
+                    <div class="hp-fill" id="playerHpFill"></div>
+                </div>
+                <p class="hp-text">HP: <span id="playerHp">100</span> / 100</p>
+            </div>
+
+            <div class="enemy-info">
+                <h2 id="enemyName">敵</h2>
+                <div class="hp-bar">
+                    <div class="hp-fill enemy-hp" id="enemyHpFill"></div>
+                </div>
+                <p class="hp-text">HP: <span id="enemyHp">100</span> / 100</p>
+                <p class="enemy-tendency" id="enemyTendency"></p>
+            </div>
+        </div>
+
+        <div class="battle-display">
+            <div class="battle-choices">
+                <div class="player-choice-display">
+                    <h3>あなた</h3>
+                    <div id="playerChoiceDisplay" class="choice-display">?</div>
+                </div>
+
+                <div class="vs-text">VS</div>
+
+                <div class="enemy-choice-display">
+                    <h3 id="enemyDisplayName">敵</h3>
+                    <div id="enemyChoiceDisplay" class="choice-display">?</div>
+                </div>
+            </div>
+
+            <div class="enemy-image">
+                <div id="enemyImageContainer"></div>
+            </div>
+        </div>
+
+        <div class="battle-area" id="battleArea">
+            <div class="item-section">
+                <button class="item-btn" id="healBtn">
+                    <span class="item-icon">💊</span>
+                    <span>回復</span>
+                    <span class="heal-text">+50</span>
+                    <span class="item-count" id="itemCount">×3</span>
+                </button>
+            </div>
+
+            <div class="choice-buttons">
+                <button class="choice-btn" data-choice="rock">
+                    <span class="choice-icon">✊</span>
+                    <span>グー</span>
+                    <span class="damage-text">10</span>
+                </button>
+                <button class="choice-btn" data-choice="scissors">
+                    <span class="choice-icon">✌️</span>
+                    <span>チョキ</span>
+                    <span class="damage-text">20</span>
+                </button>
+                <button class="choice-btn" data-choice="paper">
+                    <span class="choice-icon">✋</span>
+                    <span>パー</span>
+                    <span class="damage-text">30</span>
+                </button>
+            </div>
+
+            <div class="battle-log" id="battleLog"></div>
+        </div>
+
+        <div class="game-over" id="gameOver" style="display: none;">
+            <h2 id="gameOverText"></h2>
+            <button class="restart-btn" id="restartBtn">もう一度プレイ</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
