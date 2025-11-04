@@ -4,7 +4,7 @@
 
 ## 🔗 ナビゲーション
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
-- [⬅️ 前のステップ: Step 01 基本のじゃんけん](../step01_basic_janken/README.md)
+- [⬅️ 前のステップ: Step 01C 配列で手を管理](../step01c_arrays_choices/README.md)
 - [➡️ 次のステップ: Step 03 HPシステム](../step03_hp_system/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step02_win_lose/answer/index.html) | [📁 コードを見る](./answer/)
 
@@ -70,6 +70,6 @@ const winConditions = {
 
 ## 🔗 ナビゲーション
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
-- [⬅️ 前のステップ: Step 01 基本のじゃんけん](../step01_basic_janken/README.md)
+- [⬅️ 前のステップ: Step 01C 配列で手を管理](../step01c_arrays_choices/README.md)
 - [➡️ 次のステップ: Step 03 HPシステム](../step03_hp_system/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step02_win_lose/answer/index.html) | [📁 コードを見る](./answer/)

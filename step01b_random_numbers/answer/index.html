@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 01B: 乱数を学ぶ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>乱数を学ぶ</h1>
+
+        <div class="button-area">
+            <button id="btn-random">ランダムな数字を出す</button>
+        </div>
+
+        <div id="result" class="result"></div>
+
+        <div class="explanation">
+            <h3>どうやって作っているの？</h3>
+            <p><code>Math.random() * 3</code> で 0〜2.9999... の小数を作る</p>
+            <p><code>Math.floor()</code> で小数点以下を切り捨てて 0, 1, 2 にする</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

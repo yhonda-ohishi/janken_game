@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 01C: 配列で手を管理</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>じゃんけん - 基本完成版</h1>
+
+        <div class="button-area">
+            <button id="btn-rock">グー</button>
+            <button id="btn-scissors">チョキ</button>
+            <button id="btn-paper">パー</button>
+        </div>
+
+        <div id="result" class="result"></div>
+
+        <div class="explanation">
+            <h3>どうやって作っているの？</h3>
+            <p>✅ <strong>配列</strong>で手の種類を管理: <code>['rock', 'scissors', 'paper']</code></p>
+            <p>✅ <strong>乱数</strong>で0,1,2のどれかを選ぶ: <code>Math.floor(Math.random() * 3)</code></p>
+            <p>✅ <strong>配列[乱数]</strong> でコンピューターの手を決定</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
