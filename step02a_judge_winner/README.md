@@ -48,17 +48,62 @@
 
 ### JavaScript部分（勝敗判定を追加）
 
-**まずはコンソールで試してみよう！**
+**まずはコンソールで関数の基本を学ぼう！**
 
-勝敗判定の関数を作る前に、コンソールで動作を確認しましょう：
+関数を使うのは初めてなので、まずは簡単な関数から試してみましょう：
 
+**ステップ1: 関数を作って呼び出してみる**
 ```javascript
 // F12キーでコンソールを開いて、以下を試してみよう
 
+// シンプルな関数を作る
+function sayHello() {
+    console.log('こんにちは！');
+}
+
+// 関数を呼び出す
+sayHello();  // 'こんにちは！' が表示される
+
+// もう一度呼び出せる
+sayHello();  // 何度でも呼び出せる
+```
+
+**ステップ2: 引数を受け取る関数**
+```javascript
+// 名前を受け取って挨拶する関数
+function greet(name) {
+    console.log('こんにちは、' + name + 'さん！');
+}
+
+// 引数を渡して呼び出す
+greet('太郎');  // 'こんにちは、太郎さん！'
+greet('花子');  // 'こんにちは、花子さん！'
+```
+
+**ステップ3: 値を返す関数**
+```javascript
+// 2つの数を足す関数
+function add(a, b) {
+    return a + b;
+}
+
+// 戻り値を受け取る
+let result = add(3, 5);
+console.log('結果:', result);  // 8
+
+// 直接使うこともできる
+console.log('合計:', add(10, 20));  // 30
+```
+
+**ステップ4: 勝敗判定の準備**
+
+関数の基本がわかったら、勝敗判定の関数を作ってみましょう：
+
+```javascript
 // 💡 すでにscript.jsで変数が宣言されている場合は、
 // 新しく宣言せず、その変数をそのまま使えます
 
-// 1. 勝利条件をオブジェクトで定義（ページ開いた直後なら）
+// 勝利条件をオブジェクトで定義（ページ開いた直後なら）
 const winConditions = {
     rock: 'scissors',    // グーはチョキに勝つ
     scissors: 'paper',   // チョキはパーに勝つ
@@ -69,11 +114,11 @@ const winConditions = {
 // すでにscript.jsで宣言されているので、constを付けずに使う：
 winConditions  // すでに宣言されている変数を確認
 
-// 2. 試しに確認してみる
+// 試しに確認してみる
 console.log(winConditions['rock']);  // 'scissors' が表示される
 console.log(winConditions.rock);     // 同じ結果
 
-// 3. 判定ロジックを試す（一時的な変数はletを使うと便利）
+// 判定ロジックを試す（一時的な変数はletを使うと便利）
 let player = 'rock';
 let computer = 'scissors';
 
