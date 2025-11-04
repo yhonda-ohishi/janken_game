@@ -4,6 +4,7 @@
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [➡️ 次のステップ: Step 01B 乱数を学ぶ](../step01b_random_numbers/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01a_buttons_click/answer/index.html) | [📁 コードを見る](./answer/)
+- [📥 ひな形をダウンロード](https://github.com/yhonda-ohishi/janken_game/raw/main/step01a_buttons_click/step01a_template.zip)
 
 ---
 
@@ -95,3 +96,4 @@ console.log('こんにちは');  // コンソールに「こんにちは」と�
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [➡️ 次のステップ: Step 01B 乱数を学ぶ](../step01b_random_numbers/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01a_buttons_click/answer/index.html) | [📁 コードを見る](./answer/)
+- [📥 ひな形をダウンロード](https://github.com/yhonda-ohishi/janken_game/raw/main/step01a_buttons_click/step01a_template.zip)
