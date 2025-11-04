@@ -18,25 +18,51 @@
 ## 📝 課題
 
 ### やること
-1. HTMLにグーのボタンを作成（ID付き）
-2. JavaScriptでそのボタンを取得
-3. console.logで取得したボタンを表示して確認
+
+**まずはブラウザのコンソールで実行してみよう！**
+
+1. **ひな形をダウンロードして開く**
+   - [📥 ひな形をダウンロード](https://github.com/yhonda-ohishi/janken_game/raw/main/step01a1_get_elements/step01a1_template.zip)
+   - ZIPを解凍して、`index.html` をブラウザで開く
+
+2. **ブラウザのコンソールを開く**
+   - `F12` キー（または `Ctrl + Shift + I`）を押す
+   - 「Console」タブをクリック
+
+3. **コンソールで以下のコードを実行**
+   ```javascript
+   const button = document.querySelector('#btn-rock');
+   ```
+   - コピーしてコンソールに貼り付けて `Enter` を押す
+
+4. **取得したボタンを確認**
+   ```javascript
+   console.log(button);
+   ```
+   - コンソールに `<button id="btn-rock">グー</button>` が表示されればOK！
+
+5. **動作を理解したら、script.js に書いてみよう**
+   - コンソールで試したコードを `script.js` に書く
+   - ファイルを保存してブラウザを更新
+   - 自動的にコンソールに表示されることを確認
 
 ### 完成イメージ
 ```
 [グー]
 
 # ブラウザのコンソールに表示される
-> <button id="btn-rock">グー</button>
+> 取得したボタン: <button id="btn-rock">グー</button>
 ```
 
 ## 💡 ヒント
 
-### HTML部分
+### HTMLはすでに準備済み！
+ひな形の `index.html` には、すでにボタンが入っています：
 ```html
 <button id="btn-rock">グー</button>
 ```
-- `id="btn-rock"` でボタンに名前をつける
+- `id="btn-rock"` でボタンに名前がついている
+- あなたがやることは、JavaScriptでこのボタンを取得すること
 
 ### JavaScript部分
 ```javascript
