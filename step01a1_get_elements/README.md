@@ -18,29 +18,29 @@
 ## 📝 課題
 
 ### やること
-1. HTMLに1つのボタンを作成（ID付き）
+1. HTMLにグーのボタンを作成（ID付き）
 2. JavaScriptでそのボタンを取得
 3. console.logで取得したボタンを表示して確認
 
 ### 完成イメージ
 ```
-[テストボタン]
+[グー]
 
 # ブラウザのコンソールに表示される
-> <button id="test-btn">テストボタン</button>
+> <button id="btn-rock">グー</button>
 ```
 
 ## 💡 ヒント
 
 ### HTML部分
 ```html
-<button id="test-btn">テストボタン</button>
+<button id="btn-rock">グー</button>
 ```
-- `id="test-btn"` でボタンに名前をつける
+- `id="btn-rock"` でボタンに名前をつける
 
 ### JavaScript部分
 ```javascript
-const button = document.querySelector('#test-btn');
+const button = document.querySelector('#btn-rock');
 console.log(button);
 ```
 
@@ -51,7 +51,7 @@ console.log(button);
 
 ### IDセレクタ
 ```javascript
-document.querySelector('#test-btn')  // IDで検索
+document.querySelector('#btn-rock')  // IDで検索
 document.querySelector('.my-class')  // クラスで検索
 document.querySelector('button')     // タグ名で検索
 ```

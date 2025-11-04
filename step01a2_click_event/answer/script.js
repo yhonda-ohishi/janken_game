@@ -1,7 +1,7 @@
 // ボタン要素を取得
-const button = document.querySelector('#click-btn');
+const button = document.querySelector('#btn-rock');
 
 // クリックイベントを設定
 button.addEventListener('click', function() {
-    console.log('ボタンがクリックされました！');
+    console.log('グー がクリックされました！');
 });
