@@ -28,7 +28,7 @@
 💡 **まず以下のHTMLを追加してください。コンソールで試す前に必要です！**
 
 ```html
-<div class="game-container">
+<div class="container">
     <div class="player-area">
         <h2>あなた</h2>
         <div class="hp-display">
