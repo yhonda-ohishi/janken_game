@@ -21,6 +21,225 @@
 3. 敵を倒したら次の敵に進む
 4. 敵の名前と画像を表示
 
+## 💡 ヒント
+
+### まずはコンソールでオブジェクトの配列を試そう！
+
+**ステップ1: 敵データの配列を作る**
+```javascript
+// F12キーでコンソールを開いて、以下を試してみよう
+
+// 敵データの配列
+const enemies = [
+    {
+        name: 'スライム',
+        maxHP: 100,
+        image: '🟢'
+    },
+    {
+        name: 'ゴブリン',
+        maxHP: 150,
+        image: '👹'
+    },
+    {
+        name: 'ドラゴン',
+        maxHP: 200,
+        image: '🐉'
+    }
+];
+
+// 確認してみる
+console.log('敵の数:', enemies.length);
+console.log('1体目:', enemies[0]);
+console.log('2体目:', enemies[1]);
+console.log('3体目:', enemies[2]);
+```
+
+**ステップ2: インデックスで敵を切り替える**
+```javascript
+// 現在の敵のインデックス
+let currentEnemyIndex = 0;
+
+// 現在の敵を取得
+let currentEnemy = enemies[currentEnemyIndex];
+console.log('現在の敵:', currentEnemy.name);
+console.log('HP:', currentEnemy.maxHP);
+
+// 次の敵に進む
+currentEnemyIndex++;
+currentEnemy = enemies[currentEnemyIndex];
+console.log('次の敵:', currentEnemy.name);
+console.log('HP:', currentEnemy.maxHP);
+
+// さらに次へ
+currentEnemyIndex++;
+currentEnemy = enemies[currentEnemyIndex];
+console.log('次の敵:', currentEnemy.name);
+
+// もう敵がいない場合
+currentEnemyIndex++;
+if (currentEnemyIndex < enemies.length) {
+    console.log('まだ敵がいる');
+} else {
+    console.log('全ての敵を倒した！');
+}
+```
+
+**ステップ3: 敵のHPを管理する**
+```javascript
+// 最初の敵に戻す
+currentEnemyIndex = 0;
+currentEnemy = enemies[currentEnemyIndex];
+
+// 敵の現在のHPを管理
+let enemyHP = currentEnemy.maxHP;
+console.log(`${currentEnemy.name}のHP: ${enemyHP} / ${currentEnemy.maxHP}`);
+
+// ダメージを与える
+enemyHP -= 30;
+console.log(`ダメージ後: ${enemyHP} / ${currentEnemy.maxHP}`);
+
+// 倒したかチェック
+if (enemyHP <= 0) {
+    console.log(`${currentEnemy.name}を倒した！`);
+
+    // 次の敵へ
+    currentEnemyIndex++;
+    if (currentEnemyIndex < enemies.length) {
+        currentEnemy = enemies[currentEnemyIndex];
+        enemyHP = currentEnemy.maxHP;
+        console.log(`次の敵: ${currentEnemy.name} (HP: ${enemyHP})`);
+    } else {
+        console.log('全ての敵を倒した！');
+    }
+}
+```
+
+**ステップ4: 画面に敵情報を表示してみる**
+
+まずHTMLに敵情報表示エリアを追加してから、コンソールで以下を試してみましょう：
+
+```javascript
+// 敵情報を表示する要素を取得
+const enemyNameDisplay = document.querySelector('#enemy-name');
+const enemyImageDisplay = document.querySelector('#enemy-image');
+const enemyHPDisplay = document.querySelector('#enemy-hp-text');
+
+// 現在の敵の情報を表示
+enemyNameDisplay.textContent = currentEnemy.name;
+enemyImageDisplay.textContent = currentEnemy.image;
+enemyHPDisplay.textContent = `${enemyHP} / ${currentEnemy.maxHP}`;
+
+console.log('画面に表示しました');
+```
+
+**動作を確認したら、関数にまとめよう！**
+
+### HTML部分
+```html
+<!-- Step 05のHTMLに以下を追加・変更 -->
+<div class="enemy-area">
+    <h2>敵</h2>
+    <div class="enemy-info">
+        <div id="enemy-image" class="enemy-image">🟢</div>
+        <div id="enemy-name" class="enemy-name">スライム</div>
+    </div>
+    <div class="hp-display">
+        <div class="hp-bar">
+            <div id="enemy-hp-fill" class="hp-fill"></div>
+        </div>
+        <span id="enemy-hp-text">100 / 100</span>
+    </div>
+</div>
+```
+
+### JavaScript部分（敵キャラクターの追加）
+
+コンソールで動作を確認したら、以下のコードを実装します：
+
+```javascript
+// 敵データの定義
+const enemies = [
+    {
+        name: 'スライム',
+        maxHP: 100,
+        image: '🟢'
+    },
+    {
+        name: 'ゴブリン',
+        maxHP: 150,
+        image: '👹'
+    },
+    {
+        name: 'ドラゴン',
+        maxHP: 200,
+        image: '🐉'
+    }
+];
+
+// 敵の状態管理
+let currentEnemyIndex = 0;
+let currentEnemy = enemies[currentEnemyIndex];
+let enemyHP = currentEnemy.maxHP;
+
+// 要素の取得
+const enemyNameDisplay = document.querySelector('#enemy-name');
+const enemyImageDisplay = document.querySelector('#enemy-image');
+const enemyHPText = document.querySelector('#enemy-hp-text');
+const enemyHPFill = document.querySelector('#enemy-hp-fill');
+
+// 敵を初期化する関数
+function initializeEnemy() {
+    currentEnemy = enemies[currentEnemyIndex];
+    enemyHP = currentEnemy.maxHP;
+
+    // 画面に表示
+    enemyNameDisplay.textContent = currentEnemy.name;
+    enemyImageDisplay.textContent = currentEnemy.image;
+    updateEnemyHPBar();
+
+    console.log(`新しい敵: ${currentEnemy.name} (HP: ${enemyHP})`);
+}
+
+// 敵のHPバーを更新
+function updateEnemyHPBar() {
+    enemyHPText.textContent = `${enemyHP} / ${currentEnemy.maxHP}`;
+    const enemyHPPercent = (enemyHP / currentEnemy.maxHP) * 100;
+    enemyHPFill.style.width = enemyHPPercent + '%';
+}
+
+// 敵撃破判定
+function checkEnemyDefeated() {
+    if (enemyHP <= 0) {
+        console.log(`${currentEnemy.name}を倒した！`);
+
+        currentEnemyIndex++;
+
+        if (currentEnemyIndex < enemies.length) {
+            // 次の敵がいる
+            resultDiv.textContent = `${currentEnemy.name}を倒した！次の敵が現れた！`;
+
+            setTimeout(() => {
+                initializeEnemy();
+                console.log('次の敵に切り替えました');
+            }, 2000); // 2秒後に次の敵
+        } else {
+            // 全ての敵を倒した
+            console.log('全ての敵を倒した！ゲームクリア！');
+            resultDiv.textContent = '全ての敵を倒した！あなたの勝利です！';
+            disableButtons();
+        }
+    }
+}
+
+// 初期化
+initializeEnemy();
+```
+
+**💡 console.logで敵の切り替えを確認しよう！**
+- 敵のインデックスの変化を確認できます
+- 次の敵への切り替えタイミングを確認できます
+
 ## 重要な概念
 
 ### 1. 敵データの管理

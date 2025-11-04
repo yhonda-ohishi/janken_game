@@ -21,6 +21,118 @@
 3. パー: 30ダメージ
 4. 勝った側が相手に自分の手に応じたダメージを与える
 
+## 💡 ヒント
+
+### まずはコンソールでダメージ計算を試そう！
+
+**ステップ1: オブジェクトでダメージ値を管理**
+```javascript
+// F12キーでコンソールを開いて、以下を試してみよう
+
+// ダメージ値をオブジェクトで定義
+const damageValues = {
+    rock: 10,
+    scissors: 20,
+    paper: 30
+};
+
+// 値を取得してみる
+console.log('グーのダメージ:', damageValues.rock);
+console.log('チョキのダメージ:', damageValues['scissors']);
+console.log('パーのダメージ:', damageValues.paper);
+```
+
+**ステップ2: 手に応じたダメージを計算**
+```javascript
+// プレイヤーが選んだ手
+let playerChoice = 'rock';
+
+// その手のダメージを取得
+let damage = damageValues[playerChoice];
+console.log(playerChoice + 'のダメージ:', damage);
+
+// 別の手でも試してみる
+playerChoice = 'paper';
+damage = damageValues[playerChoice];
+console.log(playerChoice + 'のダメージ:', damage);
+```
+
+**ステップ3: 実際にHPを減らしてみる**
+```javascript
+// 💡 すでにscript.jsでHPが宣言されている場合は、そのまま使えます
+
+let computerHP = 100;
+let playerChoice = 'scissors';  // チョキを選んだ
+
+// ダメージを計算
+let damage = damageValues[playerChoice];
+console.log('与えるダメージ:', damage);
+
+// HPからダメージを引く
+computerHP -= damage;
+console.log('ダメージ後のHP:', computerHP);
+
+// もう一度攻撃
+computerHP -= damageValues['paper'];
+console.log('2回目のダメージ後:', computerHP);
+```
+
+**動作を確認したら、関数にまとめよう！**
+
+### HTML部分
+Step 03のHTMLをそのまま使用します（HPバーとボタンが必要です）。
+
+### JavaScript部分（ダメージ計算の追加）
+
+コンソールで動作を確認したら、以下のコードを実装します：
+
+```javascript
+// ダメージ値の定義
+const damageValues = {
+    rock: 10,      // グー: 10ダメージ
+    scissors: 20,  // チョキ: 20ダメージ
+    paper: 30      // パー: 30ダメージ
+};
+
+// ダメージを適用する関数（Step 03から更新）
+function applyDamage(result, playerChoice, computerChoice) {
+    let damage = 0;
+
+    if (result === 'win') {
+        // プレイヤーが勝った場合、プレイヤーの手のダメージを与える
+        damage = damageValues[playerChoice];
+        computerHP -= damage;
+        console.log(`コンピューターに${damage}ダメージ！残りHP: ${computerHP}`);
+    } else if (result === 'lose') {
+        // コンピューターが勝った場合、コンピューターの手のダメージを受ける
+        damage = damageValues[computerChoice];
+        playerHP -= damage;
+        console.log(`プレイヤーに${damage}ダメージ！残りHP: ${playerHP}`);
+    } else {
+        console.log('引き分け、ダメージなし');
+    }
+
+    // HPが0未満にならないようにする
+    playerHP = Math.max(0, playerHP);
+    computerHP = Math.max(0, computerHP);
+
+    // HPバーを更新
+    updateHPBar();
+
+    // ゲーム終了判定
+    if (playerHP <= 0 || computerHP <= 0) {
+        console.log('ゲーム終了！');
+        gameOver();
+    }
+
+    return damage;  // ダメージ量を返す
+}
+```
+
+**💡 console.logでダメージ量を確認しよう！**
+- 各手でどれくらいのダメージが出るか確認できます
+- ゲームバランスの調整に役立ちます
+
 ## 重要な概念
 
 ### 1. オブジェクトでデータ管理
