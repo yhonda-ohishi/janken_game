@@ -32,6 +32,19 @@
 
 ## 💡 ヒント
 
+### HTML部分
+```html
+<div class="button-area">
+    <button id="btn-rock">グー</button>
+    <button id="btn-scissors">チョキ</button>
+    <button id="btn-paper">パー</button>
+</div>
+
+<div id="result" class="result"></div>
+```
+- 3つのボタンにそれぞれIDをつける（`btn-rock`, `btn-scissors`, `btn-paper`）
+- 結果を表示するための空の`div`を用意（`id="result"`）
+
 ### JavaScript部分
 ```javascript
 const resultDiv = document.querySelector('#result');
