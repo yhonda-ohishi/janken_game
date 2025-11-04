@@ -4,7 +4,7 @@
 
 ## 🔗 ナビゲーション
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
-- [⬅️ 前のステップ: Step 02 勝敗判定](../step02_win_lose/README.md)
+- [⬅️ 前のステップ: Step 02B 結果表示の色分け](../step02b_result_display/README.md)
 - [➡️ 次のステップ: Step 04 ダメージ計算](../step04_damage_calculation/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step03_hp_system/answer/index.html) | [📁 コードを見る](./answer/)
 
@@ -183,6 +183,6 @@ Step 04では、手の種類によってダメージ量を変える仕組みを�
 
 ## 🔗 ナビゲーション
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
-- [⬅️ 前のステップ: Step 02 勝敗判定](../step02_win_lose/README.md)
+- [⬅️ 前のステップ: Step 02B 結果表示の色分け](../step02b_result_display/README.md)
 - [➡️ 次のステップ: Step 04 ダメージ計算](../step04_damage_calculation/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step03_hp_system/answer/index.html) | [📁 コードを見る](./answer/)

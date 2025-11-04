@@ -3,7 +3,7 @@
 ## 🔗 ナビゲーション
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01B 乱数を学ぶ](../step01b_random_numbers/README.md)
-- [➡️ 次のステップ: Step 02 勝敗判定](../step02_win_lose/README.md)
+- [➡️ 次のステップ: Step 02A if文での勝敗判定](../step02a_judge_winner/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01c_arrays_choices/answer/index.html) | [📁 コードを見る](./answer/)
 
 ---
@@ -143,5 +143,5 @@ handDisplay['rock']  // 'グー ✊'
 ## 🔗 ナビゲーション
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01B 乱数を学ぶ](../step01b_random_numbers/README.md)
-- [➡️ 次のステップ: Step 02 勝敗判定](../step02_win_lose/README.md)
+- [➡️ 次のステップ: Step 02A if文での勝敗判定](../step02a_judge_winner/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01c_arrays_choices/answer/index.html) | [📁 コードを見る](./answer/)
