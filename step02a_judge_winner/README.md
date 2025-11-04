@@ -55,24 +55,27 @@
 ```javascript
 // F12キーでコンソールを開いて、以下を試してみよう
 
-// 💡 すでに変数が宣言されている場合は、constを省略してOK
-// "Identifier 'xxx' has already been declared" エラーが出たら、
-// constを取って、変数名だけで使いましょう
+// 💡 すでにscript.jsで変数が宣言されている場合は、
+// 新しく宣言せず、その変数をそのまま使えます
 
-// 1. 勝利条件をオブジェクトで定義
+// 1. 勝利条件をオブジェクトで定義（ページ開いた直後なら）
 const winConditions = {
     rock: 'scissors',    // グーはチョキに勝つ
     scissors: 'paper',   // チョキはパーに勝つ
     paper: 'rock'        // パーはグーに勝つ
 };
 
+// もし "Identifier 'winConditions' has already been declared" エラーが出たら、
+// すでにscript.jsで宣言されているので、constを付けずに使う：
+winConditions  // すでに宣言されている変数を確認
+
 // 2. 試しに確認してみる
 console.log(winConditions['rock']);  // 'scissors' が表示される
 console.log(winConditions.rock);     // 同じ結果
 
-// 3. 判定ロジックを試す
-const player = 'rock';
-const computer = 'scissors';
+// 3. 判定ロジックを試す（一時的な変数はletを使うと便利）
+let player = 'rock';
+let computer = 'scissors';
 
 if (player === computer) {
     console.log('引き分け');
@@ -81,6 +84,11 @@ if (player === computer) {
 } else {
     console.log('コンピューターの勝ち');
 }
+
+// 違う組み合わせも試してみる
+player = 'scissors';
+computer = 'rock';
+// 上のif文をもう一度実行してみよう
 ```
 
 **動作を確認したら、関数にまとめよう：**

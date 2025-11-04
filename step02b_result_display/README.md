@@ -83,17 +83,17 @@
 
 **ステップ2: コンソールで要素を取得**
 ```javascript
-// すでに変数が宣言されている場合は、そのまま使う
-// もし "Identifier 'resultDiv' has already been declared" というエラーが出たら、
-// constを省略して使ってOK
+// 💡 すでにscript.jsで変数が宣言されている場合は、
+// 新しく宣言せず、そのまま使えます
 
-// 新しくページを開いた場合
+// ページを開いた直後なら、まず変数を宣言
 const resultDiv = document.querySelector('#result');
 
-// または、既に宣言されている場合はこちら
-resultDiv = document.querySelector('#result');
+// もし "Identifier 'resultDiv' has already been declared" エラーが出たら、
+// すでに宣言されているので、constを付けずにそのまま使う：
+document.querySelector('#result').textContent = 'テスト表示';
 
-// 何か表示してみる
+// または、script.jsですでに宣言されている変数名をそのまま使う
 resultDiv.textContent = 'テスト表示';
 ```
 
