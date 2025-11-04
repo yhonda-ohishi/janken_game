@@ -31,6 +31,45 @@
 
 ## 💡 ヒント
 
+### HTML部分
+```html
+<div class="button-area">
+    <button id="btn-rock">グー</button>
+    <button id="btn-scissors">チョキ</button>
+    <button id="btn-paper">パー</button>
+</div>
+
+<div id="result" class="result"></div>
+```
+- Step 01A-3と同じHTML構造
+
+### JavaScript部分（重要な部分）
+```javascript
+// 手の選択肢を配列で管理
+const choices = ['rock', 'scissors', 'paper'];
+
+// 手の表示用オブジェクト
+const handDisplay = {
+    rock: 'グー ✊',
+    scissors: 'チョキ ✌️',
+    paper: 'パー ✋'
+};
+
+// ボタンをクリックしたとき
+rockButton.addEventListener('click', function() {
+    const playerChoice = 'rock';
+
+    // コンピューターの手をランダムに選ぶ
+    const randomIndex = Math.floor(Math.random() * 3);
+    const computerChoice = choices[randomIndex];
+
+    // 結果を表示
+    resultDiv.textContent =
+        `あなた: ${handDisplay[playerChoice]}\n` +
+        `コンピューター: ${handDisplay[computerChoice]}`;
+});
+```
+
 ### 配列とは？
 ```javascript
 // 配列は複数の値を1つの変数にまとめたもの
