@@ -4,7 +4,7 @@
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [➡️ 次のステップ: Step 01A-2 クリックイベント](../step01a2_click_event/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01a1_get_elements/answer/index.html) | [📁 コードを見る](./answer/)
-- [📥 ひな形をダウンロード](step01a1_template.zip)
+- [📥 ひな形ファイル](./template/)
 
 **💡 このひな形を使って、Step 01A-2、01A-3も進められます！**
 
@@ -21,9 +21,9 @@
 
 **まずはブラウザのコンソールで実行してみよう！**
 
-1. **ひな形をダウンロードして開く**
-   - [📥 ひな形をダウンロード](step01a1_template.zip)
-   - ZIPを解凍して、`index.html` をブラウザで開く
+1. **ひな形ファイルを取得して開く**
+   - [📥 ひな形ファイル](./template/)から、`index.html`、`style.css`、`script.js` の3つのファイルをダウンロード
+   - 同じフォルダに保存して、`index.html` をブラウザで開く
 
 2. **ブラウザのコンソールを開く**
    - `F12` キー（または `Ctrl + Shift + I`）を押す
@@ -113,4 +113,4 @@ HTMLで作った要素を、JavaScriptで操作するには、まず「取得」
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [➡️ 次のステップ: Step 01A-2 クリックイベント](../step01a2_click_event/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01a1_get_elements/answer/index.html) | [📁 コードを見る](./answer/)
-- [📥 ひな形をダウンロード](step01a1_template.zip)
+- [📥 ひな形ファイル](./template/)
