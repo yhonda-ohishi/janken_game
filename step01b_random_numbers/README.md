@@ -29,6 +29,28 @@
 
 ## 💡 ヒント
 
+### HTML部分
+```html
+<div class="button-area">
+    <button id="btn-random">ランダムな数字を出す</button>
+</div>
+
+<div id="result" class="result"></div>
+```
+- ボタン1つと、結果を表示する`div`を用意
+
+### JavaScript部分（完成形）
+```javascript
+const resultDiv = document.querySelector('#result');
+const randomButton = document.querySelector('#btn-random');
+
+randomButton.addEventListener('click', function() {
+    const randomNumber = Math.floor(Math.random() * 3);
+    console.log('ランダムな数字:', randomNumber);
+    resultDiv.textContent = 'コンピューターが選んだ数字: ' + randomNumber;
+});
+```
+
 ### Math.random() について
 ```javascript
 Math.random()  // 0以上1未満のランダムな小数を返す
