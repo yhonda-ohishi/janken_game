@@ -1,28 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 20px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .container {
     background: white;
-    padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    max-width: 600px;
+    padding: 40px;
+    max-width: 800px;
     width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
 h1 {
-    color: #333;
+    color: #667eea;
     margin-bottom: 30px;
-    font-size: 28px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
 }
 
 .button-area {
@@ -53,6 +64,12 @@ button:active {
     transform: translateY(0);
 }
 
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
 .info {
     background: #e3f2fd;
     padding: 20px;
@@ -66,6 +83,7 @@ button:active {
     font-size: 14px;
 }
 
+/* 結果表示 */
 .result {
     padding: 20px;
     margin: 20px 0;
@@ -91,4 +109,154 @@ button:active {
     background-color: #fff3cd;
     border: 2px solid #ffc107;
     color: #856404;
+}
+
+/* HPバー */
+.player-area, .computer-area {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.hp-display {
+    margin-top: 10px;
+}
+
+.hp-bar {
+    width: 100%;
+    height: 30px;
+    background: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 2px solid #333;
+}
+
+.hp-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50 0%, #8BC34A 100%);
+    transition: width 0.5s ease;
+    width: 100%;
+}
+
+.hp-text {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+/* バトルログ */
+.battle-log-container {
+    margin-top: 30px;
+}
+
+.battle-log {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.log-entry {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.log-entry.win {
+    background: #c8e6c9;
+    color: #2e7d32;
+}
+
+.log-entry.lose {
+    background: #ffcdd2;
+    color: #c62828;
+}
+
+.log-entry.draw {
+    background: #fff9c4;
+    color: #f57f17;
+}
+
+/* 敵キャラクター */
+.enemy-area {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.enemy-info {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.enemy-image {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.enemy-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ラウンドカウンター */
+.round-counter {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* リスタートボタン */
+.restart-btn, #restart-btn {
+    padding: 15px 40px;
+    font-size: 1.3em;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-top: 20px;
+}
+
+.restart-btn:hover, #restart-btn:hover {
+    transform: scale(1.1);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .button-area {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
 }
