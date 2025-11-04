@@ -163,10 +163,6 @@ function applyDamage(result) {
         console.log('プレイヤーに20ダメージ！');
     }
 
-    // HPが0未満にならないようにする
-    playerHP = Math.max(0, playerHP);
-    computerHP = Math.max(0, computerHP);
-
     // HPバーを更新
     updateHPBar();
 
@@ -244,12 +240,10 @@ function applyDamage(winner) {
   } else if (winner === 'computer') {
     playerHP -= 20;
   }
-  // HPが0未満にならないようにする
-  playerHP = Math.max(0, playerHP);
-  computerHP = Math.max(0, computerHP);
 }
 ```
-- `Math.max(0, hp)`でHPが負の値にならないようにします
+- 勝者に応じてHPを減らします
+- HPが0以下になったかどうかは、次のゲーム終了判定でチェックします
 
 ### ゲーム終了判定
 ```javascript

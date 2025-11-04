@@ -112,10 +112,6 @@ function applyDamage(result, playerChoice, computerChoice) {
         console.log('引き分け、ダメージなし');
     }
 
-    // HPが0未満にならないようにする
-    playerHP = Math.max(0, playerHP);
-    computerHP = Math.max(0, computerHP);
-
     // HPバーを更新
     updateHPBar();
 
