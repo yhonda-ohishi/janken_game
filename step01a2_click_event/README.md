@@ -29,6 +29,14 @@
 
 ## 💡 ヒント
 
+### HTML部分
+```html
+<div class="button-area">
+    <button id="btn-rock">グー</button>
+</div>
+```
+- Step 01A-1で作ったHTMLをそのまま使う（Step 01A-1のひな形を使っていればすでに完成）
+
 ### JavaScript部分
 ```javascript
 const button = document.querySelector('#btn-rock');

@@ -21,6 +21,75 @@
 3. HPバーを画面に表示する
 4. どちらかのHPが0になったらゲーム終了
 
+## 💡 ヒント
+
+### HTML部分
+```html
+<div class="game-container">
+    <div class="player-area">
+        <h2>あなた</h2>
+        <div class="hp-display">
+            <div class="hp-bar">
+                <div id="player-hp-fill" class="hp-fill"></div>
+            </div>
+            <span id="player-hp-text">100 / 100</span>
+        </div>
+    </div>
+
+    <div class="computer-area">
+        <h2>コンピューター</h2>
+        <div class="hp-display">
+            <div class="hp-bar">
+                <div id="computer-hp-fill" class="hp-fill"></div>
+            </div>
+            <span id="computer-hp-text">100 / 100</span>
+        </div>
+    </div>
+
+    <div class="button-area">
+        <button id="btn-rock">グー</button>
+        <button id="btn-scissors">チョキ</button>
+        <button id="btn-paper">パー</button>
+    </div>
+
+    <div id="result" class="result"></div>
+</div>
+```
+
+### JavaScript部分（HP管理の追加）
+```javascript
+let playerHP = 100;
+let computerHP = 100;
+const maxHP = 100;
+
+function updateHPBar() {
+    const playerHPPercent = (playerHP / maxHP) * 100;
+    document.getElementById('player-hp-fill').style.width = playerHPPercent + '%';
+    document.getElementById('player-hp-text').textContent = `${playerHP} / ${maxHP}`;
+
+    const computerHPPercent = (computerHP / maxHP) * 100;
+    document.getElementById('computer-hp-fill').style.width = computerHPPercent + '%';
+    document.getElementById('computer-hp-text').textContent = `${computerHP} / ${maxHP}`;
+}
+
+function applyDamage(result) {
+    if (result === 'win') {
+        computerHP -= 20;
+    } else if (result === 'lose') {
+        playerHP -= 20;
+    }
+
+    playerHP = Math.max(0, playerHP);
+    computerHP = Math.max(0, computerHP);
+
+    updateHPBar();
+
+    if (playerHP <= 0 || computerHP <= 0) {
+        gameOver();
+    }
+}
+```
+
 ## 重要な概念
 
 ### 1. 変数でHPを管理

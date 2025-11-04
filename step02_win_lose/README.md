@@ -35,6 +35,49 @@
 
 ## 💡 ヒント
 
+### HTML部分
+```html
+<div class="button-area">
+    <button id="btn-rock">グー</button>
+    <button id="btn-scissors">チョキ</button>
+    <button id="btn-paper">パー</button>
+</div>
+
+<div id="result" class="result"></div>
+```
+- Step 01Cと同じHTML構造
+
+### JavaScript部分（勝敗判定の追加）
+```javascript
+// 勝利条件をオブジェクトで管理
+const winConditions = {
+    rock: 'scissors',
+    scissors: 'paper',
+    paper: 'rock'
+};
+
+// 勝敗を判定する関数
+function judgeWinner(player, computer) {
+    if (player === computer) {
+        return 'draw';
+    } else if (winConditions[player] === computer) {
+        return 'win';
+    } else {
+        return 'lose';
+    }
+}
+
+// ボタンクリック時に勝敗判定を追加
+const result = judgeWinner(playerChoice, computerChoice);
+
+// 結果に応じてクラスを追加
+resultDiv.classList.remove('win', 'lose', 'draw');
+if (result === 'win') {
+    resultDiv.classList.add('win');
+    resultDiv.textContent += '\n結果: あなたの勝ち！';
+}
+```
+
 ### 勝敗判定のロジック
 ```javascript
 // グーはチョキに勝つ
