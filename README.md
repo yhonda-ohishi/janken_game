@@ -8,18 +8,20 @@ HTML/CSS/JavaScriptで作成したブラウザベースのじゃんけんバト�
 
 ## 📚 学習パス
 
-このリポジトリには、初心者向けの**13ステップの段階的な学習教材**が含まれています。
+このリポジトリには、初心者向けの**15ステップの段階的な学習教材**が含まれています。
 
 ### 🎯 学習を始める
 
 1. [📖 学習パスの全体像を見る](LEARNING_PATH.md)
-2. [🚀 Step 01Aから始める](step01a_buttons_click/README.md)
+2. [🚀 Step 01A-1から始める](step01a1_get_elements/README.md)
 
 ### ステップ一覧
 
 | ステップ | タイトル | 学習内容 | デモ |
 |---------|---------|---------|------|
-| Step 01A | [ボタンとクリック](step01a_buttons_click/README.md) | HTMLボタン、クリックイベント、表示 | [▶️](https://yhonda-ohishi.github.io/janken_game/step01a_buttons_click/answer/index.html) |
+| Step 01A-1 | [要素の取得](step01a1_get_elements/README.md) | querySelector、IDセレクタ | [▶️](https://yhonda-ohishi.github.io/janken_game/step01a1_get_elements/answer/index.html) |
+| Step 01A-2 | [クリックイベント](step01a2_click_event/README.md) | addEventListener、イベント処理 | [▶️](https://yhonda-ohishi.github.io/janken_game/step01a2_click_event/answer/index.html) |
+| Step 01A-3 | [画面への表示](step01a3_display_result/README.md) | textContent、統合 | [▶️](https://yhonda-ohishi.github.io/janken_game/step01a3_display_result/answer/index.html) |
 | Step 01B | [乱数を学ぶ](step01b_random_numbers/README.md) | Math.random()、小数→整数、0-2生成 | [▶️](https://yhonda-ohishi.github.io/janken_game/step01b_random_numbers/answer/index.html) |
 | Step 01C | [配列で手を管理](step01c_arrays_choices/README.md) | 配列の基本、要素取得、乱数と配列 | [▶️](https://yhonda-ohishi.github.io/janken_game/step01c_arrays_choices/answer/index.html) |
 | Step 02 | [勝敗判定](step02_win_lose/README.md) | if文、勝敗ロジック、CSS変更 | [▶️](https://yhonda-ohishi.github.io/janken_game/step02_win_lose/answer/index.html) |
@@ -104,8 +106,8 @@ janken_game/
 - ゲーム開発に興味がある方
 
 ### 学習時間
-- **合計**: 約12.5〜16.5時間
-- **1ステップ**: 10分〜2.5時間（ステップにより異なる）
+- **合計**: 約13〜17時間
+- **1ステップ**: 5分〜2.5時間（ステップにより異なる）
 
 ### 前提知識
 - HTMLの基本（タグ、属性）
@@ -129,7 +131,7 @@ cd janken_game
 
 ### 学習を始める
 1. [LEARNING_PATH.md](LEARNING_PATH.md) を読む
-2. [step01a_buttons_click/README.md](step01a_buttons_click/README.md) から順番に進める
+2. [step01a1_get_elements/README.md](step01a1_get_elements/README.md) から順番に進める
 3. 自力で課題に取り組む
 4. 詰まったら `answer/` フォルダの解答を参照
 5. 次のステップに進む
@@ -200,4 +202,4 @@ MIT License - 自由に学習・改変・配布できます
 
 **さあ、じゃんけんバトルゲームの開発を始めましょう！ 🚀**
 
-[📖 学習パスを見る](LEARNING_PATH.md) | [🚀 Step 01Aから始める](step01a_buttons_click/README.md)
+[📖 学習パスを見る](LEARNING_PATH.md) | [🚀 Step 01A-1から始める](step01a1_get_elements/README.md)
