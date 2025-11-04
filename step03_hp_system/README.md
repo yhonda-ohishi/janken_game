@@ -23,6 +23,76 @@
 
 ## 💡 ヒント
 
+### まずはコンソールでHPの仕組みを試そう！
+
+**ステップ1: 変数でHPを管理してみる**
+```javascript
+// F12キーでコンソールを開いて、以下を試してみよう
+
+// HPを管理する変数を作る
+let playerHP = 100;
+let computerHP = 100;
+const maxHP = 100;
+
+// 確認してみる
+console.log('プレイヤーHP:', playerHP);
+console.log('コンピューターHP:', computerHP);
+
+// ダメージを与えてみる
+playerHP -= 20;
+console.log('ダメージ後のプレイヤーHP:', playerHP);
+
+// HPの割合を計算してみる
+const playerHPPercent = (playerHP / maxHP) * 100;
+console.log('プレイヤーHPの割合:', playerHPPercent + '%');
+```
+
+**ステップ2: HPバーの幅を変更してみる**
+
+まずHTMLにHPバーを追加してから、コンソールで以下を試してみましょう：
+
+```javascript
+// HPバーの要素を取得
+const playerHPBar = document.querySelector('#player-hp-fill');
+
+// 幅を変更してみる（80%に）
+playerHPBar.style.width = '80%';
+
+// 50%に変更
+playerHPBar.style.width = '50%';
+
+// 0%に変更（HPゼロの状態）
+playerHPBar.style.width = '0%';
+
+// 100%に戻す
+playerHPBar.style.width = '100%';
+```
+
+**ステップ3: HP割合から幅を計算してみる**
+```javascript
+// HPが80のとき
+let hp = 80;
+const percent = (hp / 100) * 100;
+console.log(percent + '%');  // '80%'
+playerHPBar.style.width = percent + '%';
+
+// HPが30のとき
+hp = 30;
+const percent2 = (hp / 100) * 100;
+playerHPBar.style.width = percent2 + '%';
+```
+
+**ステップ4: テキストも更新してみる**
+```javascript
+const playerHPText = document.querySelector('#player-hp-text');
+playerHPText.textContent = '80 / 100';
+
+// HPが30のとき
+playerHPText.textContent = '30 / 100';
+```
+
+**動作を確認したら、関数にまとめよう！**
+
 ### HTML部分
 ```html
 <div class="game-container">
@@ -57,38 +127,59 @@
 ```
 
 ### JavaScript部分（HP管理の追加）
+
+コンソールで動作を確認したら、以下のコードを実装します：
+
 ```javascript
+// HPの初期値
 let playerHP = 100;
 let computerHP = 100;
 const maxHP = 100;
 
+// HPバーを更新する関数
 function updateHPBar() {
+    // プレイヤーのHPバーを更新
     const playerHPPercent = (playerHP / maxHP) * 100;
     document.getElementById('player-hp-fill').style.width = playerHPPercent + '%';
     document.getElementById('player-hp-text').textContent = `${playerHP} / ${maxHP}`;
 
+    // コンピューターのHPバーを更新
     const computerHPPercent = (computerHP / maxHP) * 100;
     document.getElementById('computer-hp-fill').style.width = computerHPPercent + '%';
     document.getElementById('computer-hp-text').textContent = `${computerHP} / ${maxHP}`;
+
+    // デバッグ用（動作確認のため）
+    console.log('HP更新 - プレイヤー:', playerHP, 'コンピューター:', computerHP);
 }
 
+// ダメージを適用する関数
 function applyDamage(result) {
     if (result === 'win') {
         computerHP -= 20;
+        console.log('コンピューターに20ダメージ！');
     } else if (result === 'lose') {
         playerHP -= 20;
+        console.log('プレイヤーに20ダメージ！');
     }
 
+    // HPが0未満にならないようにする
     playerHP = Math.max(0, playerHP);
     computerHP = Math.max(0, computerHP);
 
+    // HPバーを更新
     updateHPBar();
 
+    // ゲーム終了判定
     if (playerHP <= 0 || computerHP <= 0) {
+        console.log('ゲーム終了！');
         gameOver();
     }
 }
 ```
+
+**💡 console.logを使ってHPの変化を確認しよう！**
+- ボタンを押すたびに、コンソールでHPの値が変わることを確認できます
+- デバッグに役立つので、動作確認中は残しておきましょう
 
 ## 重要な概念
 
