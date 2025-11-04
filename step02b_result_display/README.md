@@ -83,8 +83,15 @@
 
 **ステップ2: コンソールで要素を取得**
 ```javascript
-// 結果表示のdivを取得
+// すでに変数が宣言されている場合は、そのまま使う
+// もし "Identifier 'resultDiv' has already been declared" というエラーが出たら、
+// constを省略して使ってOK
+
+// 新しくページを開いた場合
 const resultDiv = document.querySelector('#result');
+
+// または、既に宣言されている場合はこちら
+resultDiv = document.querySelector('#result');
 
 // 何か表示してみる
 resultDiv.textContent = 'テスト表示';

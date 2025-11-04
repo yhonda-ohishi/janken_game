@@ -55,6 +55,10 @@
 ```javascript
 // F12キーでコンソールを開いて、以下を試してみよう
 
+// 💡 すでに変数が宣言されている場合は、constを省略してOK
+// "Identifier 'xxx' has already been declared" エラーが出たら、
+// constを取って、変数名だけで使いましょう
+
 // 1. 勝利条件をオブジェクトで定義
 const winConditions = {
     rock: 'scissors',    // グーはチョキに勝つ
