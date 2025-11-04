@@ -23,6 +23,42 @@
 
 ## 💡 ヒント
 
+### HTML部分
+
+💡 **まず以下のHTMLを追加してください。コンソールで試す前に必要です！**
+
+```html
+<div class="game-container">
+    <div class="player-area">
+        <h2>あなた</h2>
+        <div class="hp-display">
+            <div class="hp-bar">
+                <div id="player-hp-fill" class="hp-fill"></div>
+            </div>
+            <span id="player-hp-text">100 / 100</span>
+        </div>
+    </div>
+
+    <div class="computer-area">
+        <h2>コンピューター</h2>
+        <div class="hp-display">
+            <div class="hp-bar">
+                <div id="computer-hp-fill" class="hp-fill"></div>
+            </div>
+            <span id="computer-hp-text">100 / 100</span>
+        </div>
+    </div>
+
+    <div class="button-area">
+        <button id="btn-rock">グー</button>
+        <button id="btn-scissors">チョキ</button>
+        <button id="btn-paper">パー</button>
+    </div>
+
+    <div id="result" class="result"></div>
+</div>
+```
+
 ### まずはコンソールでHPの仕組みを試そう！
 
 **ステップ1: 変数でHPを管理してみる**
@@ -48,8 +84,6 @@ console.log('プレイヤーHPの割合:', playerHPPercent + '%');
 ```
 
 **ステップ2: HPバーの幅を変更してみる**
-
-まずHTMLにHPバーを追加してから、コンソールで以下を試してみましょう：
 
 ```javascript
 // HPバーの要素を取得
@@ -92,39 +126,6 @@ playerHPText.textContent = '30 / 100';
 ```
 
 **動作を確認したら、関数にまとめよう！**
-
-### HTML部分
-```html
-<div class="game-container">
-    <div class="player-area">
-        <h2>あなた</h2>
-        <div class="hp-display">
-            <div class="hp-bar">
-                <div id="player-hp-fill" class="hp-fill"></div>
-            </div>
-            <span id="player-hp-text">100 / 100</span>
-        </div>
-    </div>
-
-    <div class="computer-area">
-        <h2>コンピューター</h2>
-        <div class="hp-display">
-            <div class="hp-bar">
-                <div id="computer-hp-fill" class="hp-fill"></div>
-            </div>
-            <span id="computer-hp-text">100 / 100</span>
-        </div>
-    </div>
-
-    <div class="button-area">
-        <button id="btn-rock">グー</button>
-        <button id="btn-scissors">チョキ</button>
-        <button id="btn-paper">パー</button>
-    </div>
-
-    <div id="result" class="result"></div>
-</div>
-```
 
 ### JavaScript部分（HP管理の追加）
 
