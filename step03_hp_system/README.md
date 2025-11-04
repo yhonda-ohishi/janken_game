@@ -125,6 +125,33 @@ playerHPText.textContent = '80 / 100';
 playerHPText.textContent = '30 / 100';
 ```
 
+**ステップ5: ボタンを無効化してみる**
+```javascript
+// ゲーム終了時の処理を試す
+
+// ボタンを取得
+const btnRock = document.querySelector('#btn-rock');
+const btnScissors = document.querySelector('#btn-scissors');
+const btnPaper = document.querySelector('#btn-paper');
+
+// ボタンを無効化
+btnRock.disabled = true;
+btnScissors.disabled = true;
+btnPaper.disabled = true;
+
+console.log('ボタンを無効化しました');
+
+// 無効化されたか確認
+console.log('グーボタンの状態:', btnRock.disabled);  // true
+
+// 有効に戻す
+btnRock.disabled = false;
+btnScissors.disabled = false;
+btnPaper.disabled = false;
+
+console.log('ボタンを有効に戻しました');
+```
+
 **動作を確認したら、関数にまとめよう！**
 
 ### JavaScript部分（HP管理の追加）
