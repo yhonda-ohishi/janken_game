@@ -173,7 +173,20 @@ function applyDamage(result) {
     // ゲーム終了判定
     if (playerHP <= 0 || computerHP <= 0) {
         console.log('ゲーム終了！');
-        gameOver();
+        // ボタンを無効化
+        document.getElementById('btn-rock').disabled = true;
+        document.getElementById('btn-scissors').disabled = true;
+        document.getElementById('btn-paper').disabled = true;
+
+        // 勝敗メッセージを表示
+        const resultDiv = document.getElementById('result');
+        if (playerHP <= 0) {
+            resultDiv.textContent = 'ゲームオーバー！あなたの負けです';
+            resultDiv.className = 'result lose';
+        } else {
+            resultDiv.textContent = 'おめでとう！あなたの勝ちです';
+            resultDiv.className = 'result win';
+        }
     }
 }
 ```
@@ -240,14 +253,23 @@ function applyDamage(winner) {
 
 ### ゲーム終了判定
 ```javascript
-function checkGameOver() {
-  if (playerHP <= 0 || computerHP <= 0) {
-    disableButtons(); // ボタンを無効化
-    if (playerHP <= 0) {
-      resultText.textContent = 'ゲームオーバー！あなたの負けです';
-    } else {
-      resultText.textContent = 'おめでとう！あなたの勝ちです';
-    }
+// applyDamage関数内で判定
+if (playerHP <= 0 || computerHP <= 0) {
+  console.log('ゲーム終了！');
+
+  // ボタンを無効化
+  document.getElementById('btn-rock').disabled = true;
+  document.getElementById('btn-scissors').disabled = true;
+  document.getElementById('btn-paper').disabled = true;
+
+  // 勝敗メッセージを表示
+  const resultDiv = document.getElementById('result');
+  if (playerHP <= 0) {
+    resultDiv.textContent = 'ゲームオーバー！あなたの負けです';
+    resultDiv.className = 'result lose';
+  } else {
+    resultDiv.textContent = 'おめでとう！あなたの勝ちです';
+    resultDiv.className = 'result win';
   }
 }
 ```

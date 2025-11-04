@@ -133,6 +133,33 @@ enemyHPDisplay.textContent = `${enemyHP} / ${currentEnemy.maxHP}`;
 console.log('画面に表示しました');
 ```
 
+**ステップ5: ボタンを無効化してみる**
+```javascript
+// ゲームクリア時の処理を試す
+
+// ボタンを取得
+const btnRock = document.querySelector('#btn-rock');
+const btnScissors = document.querySelector('#btn-scissors');
+const btnPaper = document.querySelector('#btn-paper');
+
+// ボタンを無効化
+btnRock.disabled = true;
+btnScissors.disabled = true;
+btnPaper.disabled = true;
+
+console.log('ボタンを無効化しました');
+
+// 無効化されたか確認
+console.log('グーボタンの状態:', btnRock.disabled);  // true
+
+// 有効に戻す
+btnRock.disabled = false;
+btnScissors.disabled = false;
+btnPaper.disabled = false;
+
+console.log('ボタンを有効に戻しました');
+```
+
 **動作を確認したら、関数にまとめよう！**
 
 ### HTML部分
@@ -227,7 +254,12 @@ function checkEnemyDefeated() {
             // 全ての敵を倒した
             console.log('全ての敵を倒した！ゲームクリア！');
             resultDiv.textContent = '全ての敵を倒した！あなたの勝利です！';
-            disableButtons();
+            resultDiv.className = 'result win';
+
+            // ボタンを無効化
+            document.getElementById('btn-rock').disabled = true;
+            document.getElementById('btn-scissors').disabled = true;
+            document.getElementById('btn-paper').disabled = true;
         }
     }
 }

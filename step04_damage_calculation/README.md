@@ -122,7 +122,20 @@ function applyDamage(result, playerChoice, computerChoice) {
     // ゲーム終了判定
     if (playerHP <= 0 || computerHP <= 0) {
         console.log('ゲーム終了！');
-        gameOver();
+        // ボタンを無効化
+        document.getElementById('btn-rock').disabled = true;
+        document.getElementById('btn-scissors').disabled = true;
+        document.getElementById('btn-paper').disabled = true;
+
+        // 勝敗メッセージを表示
+        const resultDiv = document.getElementById('result');
+        if (playerHP <= 0) {
+            resultDiv.textContent = 'ゲームオーバー！あなたの負けです';
+            resultDiv.className = 'result lose';
+        } else {
+            resultDiv.textContent = 'おめでとう！あなたの勝ちです';
+            resultDiv.className = 'result win';
+        }
     }
 
     return damage;  // ダメージ量を返す
