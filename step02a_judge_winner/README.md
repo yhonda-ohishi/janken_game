@@ -1,6 +1,7 @@
 # Step 02A: if文での勝敗判定
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01C 配列で手を管理](../step01c_arrays_choices/README.md)
 - [➡️ 次のステップ: Step 02B 結果表示の色分け](../step02b_result_display/README.md)
@@ -285,6 +286,7 @@ if (winConditions[player] === computer) return 'win';
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01C 配列で手を管理](../step01c_arrays_choices/README.md)
 - [➡️ 次のステップ: Step 02B 結果表示の色分け](../step02b_result_display/README.md)

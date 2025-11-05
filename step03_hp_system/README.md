@@ -3,6 +3,7 @@
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 02B 結果表示の色分け](../step02b_result_display/README.md)
 - [➡️ 次のステップ: Step 04 ダメージ計算](../step04_damage_calculation/README.md)
@@ -317,6 +318,7 @@ Step 04では、手の種類によってダメージ量を変える仕組みを�
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 02B 結果表示の色分け](../step02b_result_display/README.md)
 - [➡️ 次のステップ: Step 04 ダメージ計算](../step04_damage_calculation/README.md)

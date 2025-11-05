@@ -3,6 +3,7 @@
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01C 配列で手を管理](../step01c_arrays_choices/README.md)
 - [➡️ 次のステップ: Step 03 HPシステム](../step03_hp_system/README.md)
@@ -112,6 +113,7 @@ const winConditions = {
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01C 配列で手を管理](../step01c_arrays_choices/README.md)
 - [➡️ 次のステップ: Step 03 HPシステム](../step03_hp_system/README.md)

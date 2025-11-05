@@ -1,6 +1,7 @@
 # Step 01: 基本のじゃんけん
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [➡️ 次のステップ: Step 02 勝敗判定](../step02_win_lose/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01_basic_janken/answer/index.html) | [📁 コードを見る](./answer/)
@@ -57,6 +58,7 @@
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [➡️ 次のステップ: Step 02 勝敗判定](../step02_win_lose/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01_basic_janken/answer/index.html) | [📁 コードを見る](./answer/)

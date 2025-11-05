@@ -1,6 +1,7 @@
 # Step 01A-3: 画面への表示
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01A-2 クリックイベント](../step01a2_click_event/README.md)
 - [➡️ 次のステップ: Step 01B 乱数を学ぶ](../step01b_random_numbers/README.md)
@@ -101,6 +102,7 @@ rockButton.addEventListener('click', function() {
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01A-2 クリックイベント](../step01a2_click_event/README.md)
 - [➡️ 次のステップ: Step 01B 乱数を学ぶ](../step01b_random_numbers/README.md)

@@ -3,6 +3,7 @@
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 08 UI改善](../step08_ui_improvements/README.md)
 - [➡️ 次のステップ: Step 10 最終版](../step10_final/README.md)
@@ -174,6 +175,7 @@ const defeatBonus = 30;
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 08 UI改善](../step08_ui_improvements/README.md)
 - [➡️ 次のステップ: Step 10 最終版](../step10_final/README.md)

@@ -3,6 +3,7 @@
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 07 敵の傾向](../step07_enemy_tendencies/README.md)
 - [➡️ 次のステップ: Step 09 アイテムシステム](../step09_item_system/README.md)
@@ -186,6 +187,7 @@ Step 09では、回復アイテムを追加して、より戦略的なゲーム�
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 07 敵の傾向](../step07_enemy_tendencies/README.md)
 - [➡️ 次のステップ: Step 09 アイテムシステム](../step09_item_system/README.md)

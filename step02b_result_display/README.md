@@ -1,6 +1,7 @@
 # Step 02B: 結果表示の色分け
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 02A if文での勝敗判定](../step02a_judge_winner/README.md)
 - [➡️ 次のステップ: Step 03 HPシステム](../step03_hp_system/README.md)
@@ -243,6 +244,7 @@ F12キーで開発者ツールを開いて：
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 02A if文での勝敗判定](../step02a_judge_winner/README.md)
 - [➡️ 次のステップ: Step 03 HPシステム](../step03_hp_system/README.md)

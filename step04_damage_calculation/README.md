@@ -3,6 +3,7 @@
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 03 HPシステム](../step03_hp_system/README.md)
 - [➡️ 次のステップ: Step 05 複数ラウンド](../step05_multiple_rounds/README.md)
@@ -261,6 +262,7 @@ Step 05では、複数ラウンドの戦闘とバトルログ機能を実装し�
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 03 HPシステム](../step03_hp_system/README.md)
 - [➡️ 次のステップ: Step 05 複数ラウンド](../step05_multiple_rounds/README.md)

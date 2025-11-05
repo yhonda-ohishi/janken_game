@@ -1,6 +1,7 @@
 # Step 01A-1: 要素の取得
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [➡️ 次のステップ: Step 01A-2 クリックイベント](../step01a2_click_event/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01a1_get_elements/answer/index.html) | [📁 コードを見る](./answer/)
@@ -110,6 +111,7 @@ HTMLで作った要素を、JavaScriptで操作するには、まず「取得」
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [➡️ 次のステップ: Step 01A-2 クリックイベント](../step01a2_click_event/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01a1_get_elements/answer/index.html) | [📁 コードを見る](./answer/)

@@ -1,6 +1,7 @@
 # Step 01C: 配列で手を管理
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01B 乱数を学ぶ](../step01b_random_numbers/README.md)
 - [➡️ 次のステップ: Step 02A if文での勝敗判定](../step02a_judge_winner/README.md)
@@ -141,6 +142,7 @@ handDisplay['rock']  // 'グー ✊'
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01B 乱数を学ぶ](../step01b_random_numbers/README.md)
 - [➡️ 次のステップ: Step 02A if文での勝敗判定](../step02a_judge_winner/README.md)

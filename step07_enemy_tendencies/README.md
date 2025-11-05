@@ -3,6 +3,7 @@
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 06 敵キャラクター](../step06_enemy_characters/README.md)
 - [➡️ 次のステップ: Step 08 UI改善](../step08_ui_improvements/README.md)
@@ -178,6 +179,7 @@ Step 08では、UIを大幅に改善して、より見やすく楽しいゲー�
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 06 敵キャラクター](../step06_enemy_characters/README.md)
 - [➡️ 次のステップ: Step 08 UI改善](../step08_ui_improvements/README.md)

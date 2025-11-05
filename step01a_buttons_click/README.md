@@ -1,6 +1,7 @@
 # Step 01A: ボタンとクリック
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [➡️ 次のステップ: Step 01B 乱数を学ぶ](../step01b_random_numbers/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01a_buttons_click/answer/index.html) | [📁 コードを見る](./answer/)
@@ -93,6 +94,7 @@ console.log('こんにちは');  // コンソールに「こんにちは」と�
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [➡️ 次のステップ: Step 01B 乱数を学ぶ](../step01b_random_numbers/README.md)
 - [🎮 解答を実行](https://yhonda-ohishi.github.io/janken_game/step01a_buttons_click/answer/index.html) | [📁 コードを見る](./answer/)

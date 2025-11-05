@@ -1,6 +1,7 @@
 # Step 01B: 乱数を学ぶ
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01A ボタンとクリック](../step01a_buttons_click/README.md)
 - [➡️ 次のステップ: Step 01C 配列で手を管理](../step01c_arrays_choices/README.md)
@@ -96,6 +97,7 @@ Math.floor(Math.random() * 3)  // 0, 1, 2 のいずれか
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 01A ボタンとクリック](../step01a_buttons_click/README.md)
 - [➡️ 次のステップ: Step 01C 配列で手を管理](../step01c_arrays_choices/README.md)

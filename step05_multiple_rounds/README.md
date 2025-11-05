@@ -3,6 +3,7 @@
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 04 ダメージ計算](../step04_damage_calculation/README.md)
 - [➡️ 次のステップ: Step 06 敵キャラクター](../step06_enemy_characters/README.md)
@@ -353,6 +354,7 @@ Step 06では、複数の敵キャラクターと順番に戦う機能を実装�
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 04 ダメージ計算](../step04_damage_calculation/README.md)
 - [➡️ 次のステップ: Step 06 敵キャラクター](../step06_enemy_characters/README.md)

@@ -3,6 +3,7 @@
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 09 アイテムシステム](../step09_item_system/README.md)
 - [🎮 最終版を実行](https://yhonda-ohishi.github.io/janken_game/step10_final/answer/index.html) | [📁 コードを見る](./answer/)
@@ -135,6 +136,7 @@
 ---
 
 ## 🔗 ナビゲーション
+- [🏠 TOPへ戻る](../README.md)
 - [📚 学習パスに戻る](../LEARNING_PATH.md)
 - [⬅️ 前のステップ: Step 09 アイテムシステム](../step09_item_system/README.md)
 - [🎮 最終版を実行](https://yhonda-ohishi.github.io/janken_game/step10_final/answer/index.html) | [📁 コードを見る](./answer/)
